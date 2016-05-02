@@ -1,4 +1,6 @@
-# passport-facebook
+# passport-accountkit
+
+** NOTE This code is forked from passport-facebook an has only been altered in a few locations to support accountkit **
 
 [![Build](https://img.shields.io/travis/jaredhanson/passport-facebook.svg)](https://travis-ci.org/jaredhanson/passport-facebook)
 [![Coverage](https://img.shields.io/coveralls/jaredhanson/passport-facebook.svg)](https://coveralls.io/r/jaredhanson/passport-facebook)
@@ -6,10 +8,10 @@
 [![Dependencies](https://img.shields.io/david/jaredhanson/passport-facebook.svg)](https://david-dm.org/jaredhanson/passport-facebook)
 
 
-[Passport](http://passportjs.org/) strategy for authenticating with [Facebook](http://www.facebook.com/)
+[Passport](http://passportjs.org/) strategy for authenticating with [Facebook's AccountKit](https://developers.facebook.com/docs/accountkit)
 using the OAuth 2.0 API.
 
-This module lets you authenticate using Facebook in your Node.js applications.
+This module lets you authenticate using AccountKit by Facebook in your Node.js applications.
 By plugging into Passport, Facebook authentication can be easily and
 unobtrusively integrated into any application or framework that supports
 [Connect](http://www.senchalabs.org/connect/)-style middleware, including
@@ -17,13 +19,13 @@ unobtrusively integrated into any application or framework that supports
 
 ## Install
 
-    $ npm install passport-facebook
+    $ npm install passport-accountkit
 
 ## Usage
 
 #### Create an Application
 
-Before using `passport-facebook`, you must register an application with
+Before using `passport-accountkit`, you must register an application with
 Facebook.  If you have not already done so, a new application can be created at
 [Facebook Developers](https://developers.facebook.com/).  Your application will
 be issued an app ID and app secret, which need to be provided to the strategy.
@@ -41,7 +43,7 @@ Facebook profile.  The `verify` callback must call `cb` providing a user to
 complete authentication.
 
 ```js
-passport.use(new FacebookStrategy({
+passport.use(new AccountkitStrategy({
     clientID: FACEBOOK_APP_ID,
     clientSecret: FACEBOOK_APP_SECRET,
     callbackURL: "http://localhost:3000/auth/facebook/callback"
@@ -56,7 +58,7 @@ passport.use(new FacebookStrategy({
 
 #### Authenticate Requests
 
-Use `passport.authenticate()`, specifying the `'facebook'` strategy, to
+Use `passport.authenticate()`, specifying the `'accountkit'` strategy, to
 authenticate requests.
 
 For example, as route middleware in an [Express](http://expressjs.com/)
@@ -114,7 +116,7 @@ not all the fields in a profile are returned.  The fields need by an application
 can be indicated by setting the `profileFields` option.
 
 ```js
-new FacebookStrategy({
+new AccountkitStrategy({
   clientID: FACEBOOK_APP_ID,
   clientSecret: FACEBOOK_APP_SECRET,
   callbackURL: "http://localhost:3000/auth/facebook/callback",

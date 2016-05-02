@@ -1,8 +1,9 @@
 {
-  "name": "passport-facebook",
+  "name": "passport-accountkit",
   "version": "2.1.0",
-  "description": "Facebook authentication strategy for Passport.",
+  "description": "Facebook AccountKit authentication strategy for Passport.",
   "keywords": [
+    "accountkit",
     "passport",
     "facebook",
     "auth",
@@ -11,16 +12,16 @@
     "identity"
   ],
   "author": {
-    "name": "Jared Hanson",
-    "email": "jaredhanson@gmail.com",
-    "url": "http://www.jaredhanson.net/"
+    "name": "Brett Park",
+    "email": "brett@shiverware.com",
+    "url": "http://www.shiverware.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jaredhanson/passport-facebook.git"
+    "url": "git://github.com/brettthepark/passport-accountkit.git"
   },
   "bugs": {
-    "url": "http://github.com/jaredhanson/passport-facebook/issues"
+    "url": "http://github.com/brettthepark/passport-accountkit.git/issues"
   },
   "license": "MIT",
   "licenses": [
